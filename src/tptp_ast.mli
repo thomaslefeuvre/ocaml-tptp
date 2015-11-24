@@ -101,38 +101,38 @@ and atomic_word =
 
    In TPTP: [variable].
 *)
-and var = private string
+and var = string
 
 (** Nonempty string which consists of ASCII characters from space to tilde.
 
    In TPTP: [atomic_word].
 *)
-and plain_word = private string
+and plain_word = string
 
 (** Dollar followed by lowercase letter and zero or more alphanumeric
    characters. Keywords ([$fof], [$cnf], [$fot]) are not allowed.
 
    In TPTP: [atomic_defined_word].
 *)
-and defined_word = private string
+and defined_word = string
 
 (** Two dollars followed by lowercase letter and zero or more alphanumeric
    characters.
 
    In TPTP: [atomic_system_word].
 *)
-and system_word = private string
+and system_word = string
 
 (** ASCII characters from space to tilde (empty string allowed).
 
    In TPTP: [distinct_object].
 *)
-and tptp_string = private string
+and tptp_string = string
 
 (** Printable ASCII characters (code >= 32 && code <= 126)
    or tabs (empty string allowed).
 *)
-and comment_line = private string
+and comment_line = string
 
 (** In TPTP: [name]. *)
 and formula_name =
